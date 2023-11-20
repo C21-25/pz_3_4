@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example</title>
+</head>
+<body>
+
+    <h1>JavaScript Code</h1>
+
+    <script>
+     
+        let modifyArray = [1, 2, 3, 4, 'five', true, 'not seven', 8, 9, 10];
+        modifyArray.unshift('start');
+        modifyArray.pop();
+        modifyArray[1] = 'modified';
+        console.log(modifyArray);
+    
+
+   
+        let arrayOperations = [1, 2, 3, 4, 5, 'six', 'seven'];
+        arrayOperations.push('end');
+        arrayOperations.shift();
+        arrayOperations.splice(3, 0, 'middle');
+        console.log(arrayOperations);
+     
+
+  
+        let checkInteger = 8;
+        let y = Number.isInteger(checkInteger);
+        if (y === true) {
+            console.log('Число ціле');
+        } else {
+            console.log('Число не ціле');
+        }
+       
+
+        
+        function calculateCircleArea(radius) {
+            const area = Math.PI * Math.pow(radius, 2);
+            const roundedArea = parseFloat(area.toFixed(2));
+            return roundedArea;
+        }
+        let radius = 5;
+        let circleArea = calculateCircleArea(radius);
+        console.log(`Площа кола з радіусом ${radius}: ${circleArea}`);
+        
+        
+        
+        
+        function displayCurrentDate() {
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            const day = currentDate.getDate();
+            const hours = currentDate.getHours();
+            const minutes = currentDate.getMinutes();
+            const formattedDate = `${day}.${month + 1}.${year} ${hours}:${minutes}`;
+            console.log(`Поточна дата та час: ${formattedDate}`);
+        }
+        displayCurrentDate();
+       
+    </script>
+
+</body>
+</html>
